@@ -1,0 +1,18 @@
+{
+  "groupings": [
+    "@src",
+    [
+			"@pages",
+      "@components"
+    ],
+		[
+			"@service",
+			"@utils",
+			"@reducer",
+		],
+    [
+      "@images",
+      "@styles"
+    ]
+  ]
+}
