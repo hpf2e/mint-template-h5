@@ -22,4 +22,5 @@ export const devServerConfig = {
 	host: devServerHost,
 	stats: 'errors-only',
 	quiet: true,
+	disableHostCheck: true,
 };
