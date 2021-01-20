@@ -7,6 +7,10 @@ body {
 	-webkit-overflow-scrolling: touch; /* 解决ios滑动不流畅问题 */
 }
 
+*:focus {
+	outline: none;
+}
+
 // reset css
 ul, li {
   margin: 0;
@@ -56,4 +60,9 @@ optgroup,
 select,
 textarea { 
 	-webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+
+// input padding
+input {
+	padding: 0;
 }
