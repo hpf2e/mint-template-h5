@@ -40,6 +40,7 @@ module.exports = (api) => {
 			'@babel/plugin-proposal-export-namespace-from',
 			'@babel/plugin-proposal-throw-expressions',
 			'@babel/proposal-object-rest-spread',
+			'@emotion',
 			// Applies the react-refresh Babel plugin on non-production modes only
 			mode !== 'production' && 'react-refresh/babel',
 
@@ -74,12 +75,102 @@ module.exports = (api) => {
 			[
 				'import',
 				{
-					libraryName: '@hupu/movie-component-toast',
+					libraryName: '@hupu/bigboy-component-toast',
 					libraryDirectory: 'es',
 					camel2DashComponentName: false,
 					style: 'css',
 				},
-				'@hupu/movie-component-toast',
+				'@hupu/bigboy-component-toast',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/bigboy-component-pullrefresh',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/bigboy-component-pullrefresh',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/bigboy-component-leftslip',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/bigboy-component-leftslip',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/bigboy-component-address',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/bigboy-component-address',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/bigboy-component-switch',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/bigboy-component-switch',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/bigboy-component-timeline',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/bigboy-component-timeline',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/bigboy-component-dialog',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/bigboy-component-dialog',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/bigboy-component-radio',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/bigboy-component-radio',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/movie-component-exposure',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/movie-component-exposure',
+			],
+			[
+				'import',
+				{
+					libraryName: '@hupu/bigboy-component-navbar',
+					libraryDirectory: 'es',
+					camel2DashComponentName: false,
+					style: 'css',
+				},
+				'@hupu/bigboy-component-navbar',
 			],
 		].filter(Boolean),
 	};

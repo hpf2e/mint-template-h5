@@ -1,0 +1,32 @@
+.seckilling-appbar {
+	&-navbar {
+		background: linear-gradient(90deg, #FF6434 0%, #FF3434 100%);
+	}
+
+	&-fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: linear-gradient(90deg, #FF6434 0%, #FF3434 100%);
+		z-index: 99;
+	}
+
+	&-placeholder {
+		background: linear-gradient(90deg, #FF6434 0%, #FF3434 100%);
+		height: 44px;
+	}
+
+	// reset
+	.movie-component-navbar-title {
+		font-weight: 500;
+		color: #fff;
+	}
+
+	.movie-component-navbar-left-icon {
+		width: 44px;
+		height: 44px;
+		background: url('../../../assets/icon_back.png') no-repeat;
+		background-size: cover;
+	}
+}

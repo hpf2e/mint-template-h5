@@ -10,7 +10,6 @@ import {arrayFilterEmpty} from './utils/helpers';
 
 export default {
 	context: __dirname,
-	// target: ['web', 'es5'],
 	mode: isProd ? 'production' : 'development',
 	entry,
 	output: {
@@ -36,8 +35,8 @@ export default {
 		plugins.htmlWebpackPlugin,
 		plugins.providePlugin,
 		plugins.definePlugin,
-		plugins.forkTsCheckerWebpackPlugin,
 		plugins.esLintPlugin,
+		plugins.friendlyErrorsPlugin,
 		plugins.copyPlugin,
 		plugins.WebpackBarPlugin,
 	]),

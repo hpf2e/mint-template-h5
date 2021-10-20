@@ -1,7 +1,11 @@
-# H5 React 生成模板
+# 秒杀列表
 
-Node: v10.16.2
+Node: v14.18.1
 
 ## 启动命令
 
 npm start
+
+## Husky
+
+- [Husky](https://dev.to/hggonzalezdev/get-started-with-git-hooks-and-husky-2c3e)

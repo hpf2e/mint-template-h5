@@ -1,4 +1,4 @@
-import axios, {AxiosRequestConfig, AxiosResponse} from 'axios';
+import axios, {AxiosRequestConfig} from 'axios';
 
 // 数据请求封装
 /**
@@ -23,7 +23,7 @@ interface IHttpFn {
 type IHttp = Record<IHttpMethods, IHttpFn>;
 
 // 基本设置
-const prefix = '';
+const prefix = `/`;
 
 const instance = axios.create({
 	baseURL: prefix, // 默认api
@@ -33,15 +33,13 @@ const instance = axios.create({
 
 // 拦截返回
 instance.interceptors.response.use(
-	(
-		response: AxiosResponse<{
+	(response) => {
+		// 当code返回SUCCESS为有效数据
+		const {code, data, errorMsg} = response.data as {
 			code: string;
 			errorMsg: string | undefined;
 			data: any;
-		}>,
-	) => {
-		// 当code返回SUCCESS为有效数据
-		const {code, data, errorMsg} = response.data;
+		};
 
 		if (code !== 'SUCCESS') {
 			return Promise.reject(errorMsg);

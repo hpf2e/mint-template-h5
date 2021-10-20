@@ -8,7 +8,7 @@
 		[
 			"@service",
 			"@utils",
-			"@reducer",
+			"@reducer"
 		],
     [
       "@images",

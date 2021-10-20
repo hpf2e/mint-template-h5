@@ -48,3 +48,30 @@ $feature: -webkit-min-device-pixel-ratio;
     }
   }
 }
+
+@mixin cellline($positions: top right bottom left, $border-color: $color, $border-radius: 0) {
+  position: relative;
+
+  &::after {
+    @include _border-base();
+    @each $position in $positions {
+      border-#{$position}: 1px solid $border-color;
+    }
+
+    @media #{$media} and ($feature: 1) {
+      @include _border-scale(1, $border-radius);
+    }
+
+    @media #{$media} and ($feature: 1.5) {
+      @include _border-scale(1.5, $border-radius);
+    }
+
+    @media #{$media} and ($feature: 2) {
+      @include _border-scale(2, $border-radius);
+    }
+
+    @media #{$media} and ($feature: 3) {
+      @include _border-scale(3, $border-radius);
+    }
+  }
+}

@@ -1,7 +1,19 @@
-import {CleanWebpackPlugin} from 'clean-webpack-plugin';
+import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin';
 
 const config = {
-	cleanOnceBeforeBuildPatterns: ['**/*', '!profile.json'],
+	compilationSuccessInfo: {
+		messages: ['You application is running here http://localhost:8080'],
+	},
+	onErrors: function (severity, errors) {
+		// You can listen to errors transformed and prioritized by the plugin
+		// severity can be 'error' or 'warning'
+	},
+	// should the console be cleared between each compilation?
+	// default is true
+	clearConsole: true,
+	// add formatters and transformers (see below)
+	additionalFormatters: [],
+	additionalTransformers: [],
 };
 
-export const cleanWebpackPlugin = new CleanWebpackPlugin(config);
+export const friendlyErrorsPlugin = new FriendlyErrorsPlugin(config);

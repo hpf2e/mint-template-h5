@@ -12,15 +12,23 @@ const devServerHost = ip.address() ?? '127.0.0.1';
 export const devServerUrl = `http://${devServerHost}:${defaultPort}/`;
 
 export const devServerConfig = {
-	publicPath: '/',
 	port: defaultPort,
 	historyApiFallback: true,
 	headers: {'Access-Control-Allow-Origin': '*'},
 	proxy: devServerProxyConfig,
 	hot: true,
-	overlay: false,
+	client: {
+		progress: true,
+		logging: 'none',
+		overlay: {
+			errors: true,
+			warnings: false,
+		},
+	},
 	host: devServerHost,
-	stats: 'errors-only',
-	quiet: true,
-	disableHostCheck: true,
+	open: true,
+	compress: true,
+	static: {
+		publicPath: '/',
+	},
 };
