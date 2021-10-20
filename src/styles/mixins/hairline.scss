@@ -2,10 +2,12 @@ $color: border-color-base;
 $media: screen;
 $feature: -webkit-min-device-pixel-ratio;
 
+@use "sass:math";
+
 @mixin _border-scale($dpr, $border-radius) {
   width: 100% * $dpr;
   height: 100% * $dpr;
-  transform: scale(1 / $dpr);
+	transform: scale(math.div(1, $dpr));
   transform-origin: 0 0;
   border-radius: $border-radius * $dpr;
 }
